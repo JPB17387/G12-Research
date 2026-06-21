@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chapter 4: Data Presentation, Analysis, and Interpretation. Statistical tables on craving, social relationships, academic performance, and correlation analysis.">
+  <title>Chapter 4: Data Analysis — Smartphone Addiction Study</title>
+  
+  <!-- Global and Page Stylesheets -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="Chapter 4.css">
+</head>
+<body>
+
+  <!-- Floating Particles Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="homepage.html" class="navbar-brand">Smartphone Addiction Study</a>
+        <ul class="navbar-links">
+          <li><a href="homepage.html">Homepage</a></li>
+          <li><a href="About authors.html">About Authors</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+          <li><a href="Chapter 1.html">Chapter 1</a></li>
+          <li><a href="Chapter 2.html">Chapter 2</a></li>
+          <li><a href="Chapter 3.html">Chapter 3</a></li>
+          <li><a href="Chapter 4.html" class="active">Chapter 4</a></li>
+          <li><a href="Chapter 5.html">Chapter 5</a></li>
+          <li><a href="References.html">References</a></li>
+          <li><a href="Apendices.html">Appendices</a></li>
+          <li><a href="Curriculum Vitae.html">CV</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button id="theme-toggle" class="theme-toggle" title="Switch Theme">🌙</button>
+          <button id="hamburger" class="hamburger" aria-expanded="false" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="homepage.html">Homepage</a>
+      <a href="About authors.html">About Authors</a>
+      <a href="Contact us.html">Contact Us</a>
+      <a href="Chapter 1.html">Chapter 1</a>
+      <a href="Chapter 2.html">Chapter 2</a>
+      <a href="Chapter 3.html">Chapter 3</a>
+      <a href="Chapter 4.html" class="active">Chapter 4</a>
+      <a href="Chapter 5.html">Chapter 5</a>
+      <a href="References.html">References</a>
+      <a href="Apendices.html">Appendices</a>
+      <a href="Curriculum Vitae.html">CV</a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="container">
+      
+      <!-- Page Hero -->
+      <section class="page-hero reveal">
+        <span class="chapter-badge">Chapter 4</span>
+        <h1 class="page-title">Data Presentation and Analysis</h1>
+        <p class="body-text">
+          This chapter presents the statistical data gathered from 242 Senior High School respondents, outlining determinants of addiction, academic grades, overall summary counts, and Pearson's r correlation.
+        </p>
+      </section>
+
+      <!-- Sub-Navigation Tabs -->
+      <nav class="chapter-subnav reveal">
+        <a href="#determinants">Determinants Analysis</a>
+        <a href="#performance">Academic Grades</a>
+        <a href="#summary">Addiction Summary</a>
+        <a href="#correlation">Correlation Analysis</a>
+      </nav>
+
+      <!-- Chapter Content -->
+      <div class="chapter-container">
+        
+        <!-- Table 1: Determinants -->
+        <section id="determinants" class="data-section glass-card reveal">
+          <span class="label-badge">Table 1</span>
+          <h2 class="section-title">Determinants of Smartphone Addiction</h2>
+          <p class="body-text">
+            The table below classifies the frequency (f) and percentage (%) of respondents across five levels of addiction for each research questionnaire category:
+          </p>
+
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="align-left">Addiction Level (Mean Range)</th>
+                  <th colspan="2">Craving</th>
+                  <th colspan="2">Social Comms</th>
+                  <th colspan="2">Social Behavior</th>
+                  <th colspan="2">Physical Discomfort</th>
+                  <th colspan="2">Study Habits</th>
+                </tr>
+                <tr>
+                  <th>f</th>
+                  <th>%</th>
+                  <th>f</th>
+                  <th>%</th>
+                  <th>f</th>
+                  <th>%</th>
+                  <th>f</th>
+                  <th>%</th>
+                  <th>f</th>
+                  <th>%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-left">Strongly Addicted (4.2 &ndash; 5.0)</td>
+                  <td>9</td>
+                  <td>3.71%</td>
+                  <td>23</td>
+                  <td>9.51%</td>
+                  <td>13</td>
+                  <td>5.37%</td>
+                  <td>14</td>
+                  <td>5.78%</td>
+                  <td>17</td>
+                  <td>7.02%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">Moderately Addicted (3.4 &ndash; 4.1)</td>
+                  <td>75</td>
+                  <td class="highlight-cell">30.99%</td>
+                  <td>40</td>
+                  <td>16.53%</td>
+                  <td>60</td>
+                  <td>24.79%</td>
+                  <td>60</td>
+                  <td>24.79%</td>
+                  <td>90</td>
+                  <td class="highlight-cell">37.19%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">Neutral (2.6 &ndash; 3.3)</td>
+                  <td>63</td>
+                  <td>26.03%</td>
+                  <td>90</td>
+                  <td class="highlight-cell">37.19%</td>
+                  <td>87</td>
+                  <td class="highlight-cell">35.95%</td>
+                  <td>85</td>
+                  <td class="highlight-cell">35.12%</td>
+                  <td>82</td>
+                  <td>33.89%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">Slightly Addicted (1.8 &ndash; 2.5)</td>
+                  <td>77</td>
+                  <td class="highlight-cell">31.81%</td>
+                  <td>65</td>
+                  <td>26.85%</td>
+                  <td>60</td>
+                  <td>24.79%</td>
+                  <td>65</td>
+                  <td>26.85%</td>
+                  <td>35</td>
+                  <td>14.46%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">Not Addicted (1.0 &ndash; 1.7)</td>
+                  <td>18</td>
+                  <td>7.44%</td>
+                  <td>24</td>
+                  <td>9.91%</td>
+                  <td>22</td>
+                  <td>9.09%</td>
+                  <td>18</td>
+                  <td>7.44%</td>
+                  <td>18</td>
+                  <td>7.44%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="subsection-title">Data Analysis & Interpretation</h3>
+          <p class="body-text">
+            The data suggests that the highest concentration of smartphone addiction parameters falls under the "Moderately Addicted" and "Neutral" ranges. Specifically, <strong>37.19% of respondents</strong> indicate moderate addiction relating to study habits and academic concentration, meaning they spend longer periods on smartphones than intended and struggle to shorten usage time. 
+          </p>
+          <p class="body-text">
+            These behaviors are consistent with research by Hooper and Zhou (2007), who associated smartphone usage with behavioral patterns like habitual, dependent, and compulsive use. However, Cassidy (2006) points out that intensive phone interactions can sometimes serve as positive alternatives to other risk-taking behaviors (e.g., alcohol or tobacco consumption).
+          </p>
+        </section>
+
+        <!-- Table 2: Academic Performance -->
+        <section id="performance" class="data-section glass-card reveal">
+          <span class="label-badge">Table 2</span>
+          <h2 class="section-title">Academic Performance of the Respondents</h2>
+          <p class="body-text">
+            The table below presents the Grade Point Average (GPA) distribution of the 242 student respondents during the first quarter:
+          </p>
+
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th class="align-left">GPA Range</th>
+                  <th>Interpretation</th>
+                  <th>Frequency (f)</th>
+                  <th>Percentage (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-left">90 &ndash; 100</td>
+                  <td>Outstanding</td>
+                  <td class="highlight-cell">156</td>
+                  <td class="highlight-cell">64.46%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">85 &ndash; 89</td>
+                  <td>Very Satisfactory</td>
+                  <td>65</td>
+                  <td>26.86%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">80 &ndash; 84</td>
+                  <td>Satisfactory</td>
+                  <td>16</td>
+                  <td>6.61%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">75 &ndash; 79</td>
+                  <td>Fairly Satisfactory</td>
+                  <td>5</td>
+                  <td>2.07%</td>
+                </tr>
+                <tr>
+                  <td class="align-left">Below 75</td>
+                  <td>Did Not Meet Expectation</td>
+                  <td>0</td>
+                  <td>0.00%</td>
+                </tr>
+                <tr style="font-weight: bold; background: rgba(255,255,255,0.02);">
+                  <td class="align-left" colspan="2">Total</td>
+                  <td>242</td>
+                  <td>100.00%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="subsection-title">Data Analysis & Interpretation</h3>
+          <p class="body-text">
+            A vast majority of the respondents—<strong>64.46% (156 students)</strong>—achieved "Outstanding" performance, followed by <strong>26.86% (65 students)</strong> who achieved "Very Satisfactory" grades. Encouragingly, no student fell below the passing threshold of 75. 
+          </p>
+          <p class="body-text">
+            Students with outstanding performance typically exhibit high self-discipline, prioritizing studies over social media and mobile gaming. In addition, some outstanding students reported having limited phone ownership, depending primarily on class focus and traditional study routines (Kabir, 2016).
+          </p>
+        </section>
+
+        <!-- Table 3: Summary of Addiction -->
+        <section id="summary" class="data-section glass-card reveal">
+          <span class="label-badge">Table 3</span>
+          <h2 class="section-title">Summary of Smartphone Addiction Levels</h2>
+          <p class="body-text">
+            The table below provides a consolidated summary of the overall smartphone addiction levels across all 242 surveyed students:
+          </p>
+
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Scale Range</th>
+                  <th>Qualitative Description</th>
+                  <th>Frequency (f)</th>
+                  <th>Percentage (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4.2 &ndash; 5.0</td>
+                  <td>Strongly Addicted</td>
+                  <td>3</td>
+                  <td>1.24%</td>
+                </tr>
+                <tr>
+                  <td>3.4 &ndash; 4.1</td>
+                  <td>Moderately Addicted</td>
+                  <td>44</td>
+                  <td>18.18%</td>
+                </tr>
+                <tr>
+                  <td>2.6 &ndash; 3.3</td>
+                  <td class="highlight-cell">Neutral</td>
+                  <td class="highlight-cell">135</td>
+                  <td class="highlight-cell">55.79%</td>
+                </tr>
+                <tr>
+                  <td>1.8 &ndash; 2.5</td>
+                  <td>Slightly Addicted</td>
+                  <td>52</td>
+                  <td>21.48%</td>
+                </tr>
+                <tr>
+                  <td>1.0 &ndash; 1.7</td>
+                  <td>Not Addicted</td>
+                  <td>8</td>
+                  <td>3.31%</td>
+                </tr>
+                <tr style="font-weight: bold; background: rgba(255,255,255,0.02);">
+                  <td colspan="2">Total</td>
+                  <td>242</td>
+                  <td>100.00%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="subsection-title">Data Analysis & Interpretation</h3>
+          <p class="body-text">
+            The overall summary shows that <strong>55.79% (135 students)</strong> fall under the "Neutral" category, indicating that while they use smartphones frequently, they maintain control and do not exhibit compulsive technology dependency. Only a small group, <strong>1.24% (3 students)</strong>, are categorized as "Strongly Addicted," while <strong>18.18% (44 students)</strong> are "Moderately Addicted." 
+          </p>
+          <p class="body-text">
+            According to Sheila and Steve (2020), because smartphone use has become an absolute social norm, a neutral or moderate addiction level is highly common. However, the presence of 19.42% of students showing moderate-to-strong addiction profiles highlights the need for targeted digital wellness interventions.
+          </p>
+        </section>
+
+        <!-- Table 4: Correlation Analysis -->
+        <section id="correlation" class="data-section reveal">
+          <div class="correlation-card">
+            <span class="label-badge" style="background: rgba(108,99,255,0.1); border-color: rgba(108,99,255,0.3); color: var(--color-primary);">Table 4</span>
+            <h2 class="section-title" style="border: none; padding-bottom: 0; margin-bottom: var(--space-sm);">Correlation Analysis</h2>
+            <p class="body-text">
+              The table below summarizes the Pearson's r correlation analysis between student smartphone addiction levels and academic performance:
+            </p>
+
+            <div class="table-wrapper">
+              <table class="data-table" style="background: var(--bg-primary);">
+                <thead>
+                  <tr>
+                    <th>Variable</th>
+                    <th>Mean Score</th>
+                    <th>Pearson's r</th>
+                    <th>P-Value</th>
+                    <th>Interpretation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Academic Performance</td>
+                    <td class="highlight-cell">89.9 (Very Satisfactory)</td>
+                    <td rowspan="2" class="corr-val" style="font-size: 1.5rem; vertical-align: middle;">0.0345</td>
+                    <td rowspan="2" style="font-size: 1.1rem; font-family: var(--font-label); color: var(--color-primary); vertical-align: middle;">0.59329</td>
+                    <td rowspan="2" class="highlight-cell" style="font-weight: 700; vertical-align: middle;">No Significant Relationship</td>
+                  </tr>
+                  <tr>
+                    <td>Smartphone Addiction</td>
+                    <td>3.0 (Neutral)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="subsection-title" style="margin-top: var(--space-lg);">Data Analysis & Interpretation</h3>
+            <p class="body-text">
+              With a calculated <strong>Pearson correlation coefficient of 0.0345</strong>, there is a very weak, close-to-zero positive relationship between smartphone addiction scores and academic GPAs. Furthermore, the calculated <strong>p-value is 0.59329</strong>, which is significantly greater than the standard alpha level of 0.05. 
+            </p>
+            <p class="body-text">
+              Therefore, we <strong>fail to reject the null hypothesis (H<sub>0</sub>)</strong>. The statistical analysis demonstrates that there is <strong>no significant relationship</strong> between the level of smartphone addiction and the academic performance of Senior High School students at Dumanjug National High School. While some students spend significant time on screen activities, it does not directly predict a decline in their quarterly GPAs. Other factors (e.g., study habits, parent supervision, or personal motivation) may act as confounding variables, as suggested by Ng et al. (2017).
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2024-2025 G12 CSS Student Researchers. All rights reserved.</p>
+      <p style="margin-top: var(--space-xs);">Developed by <strong>Jhon Paul Baonil</strong> under Practical Research 2 in Dumanjug National High School.</p>
+    </footer>
+  </div>
+
+  <!-- Global JavaScript -->
+  <script src="global.js"></script>
+</body>
+</html>

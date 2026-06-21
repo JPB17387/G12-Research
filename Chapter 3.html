@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chapter 3: Research Methodology. Slovin's sample calculations, Likert survey tools, research design, and Pearson r statistical treatment.">
+  <title>Chapter 3: Research Methodology — Smartphone Addiction Study</title>
+  
+  <!-- Global and Page Stylesheets -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="Chapter 3.css">
+</head>
+<body>
+
+  <!-- Floating Particles Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="homepage.html" class="navbar-brand">Smartphone Addiction Study</a>
+        <ul class="navbar-links">
+          <li><a href="homepage.html">Homepage</a></li>
+          <li><a href="About authors.html">About Authors</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+          <li><a href="Chapter 1.html">Chapter 1</a></li>
+          <li><a href="Chapter 2.html">Chapter 2</a></li>
+          <li><a href="Chapter 3.html" class="active">Chapter 3</a></li>
+          <li><a href="Chapter 4.html">Chapter 4</a></li>
+          <li><a href="Chapter 5.html">Chapter 5</a></li>
+          <li><a href="References.html">References</a></li>
+          <li><a href="Apendices.html">Appendices</a></li>
+          <li><a href="Curriculum Vitae.html">CV</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button id="theme-toggle" class="theme-toggle" title="Switch Theme">🌙</button>
+          <button id="hamburger" class="hamburger" aria-expanded="false" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="homepage.html">Homepage</a>
+      <a href="About authors.html">About Authors</a>
+      <a href="Contact us.html">Contact Us</a>
+      <a href="Chapter 1.html">Chapter 1</a>
+      <a href="Chapter 2.html">Chapter 2</a>
+      <a href="Chapter 3.html" class="active">Chapter 3</a>
+      <a href="Chapter 4.html">Chapter 4</a>
+      <a href="Chapter 5.html">Chapter 5</a>
+      <a href="References.html">References</a>
+      <a href="Apendices.html">Appendices</a>
+      <a href="Curriculum Vitae.html">CV</a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="container">
+      
+      <!-- Page Hero -->
+      <section class="page-hero reveal">
+        <span class="chapter-badge">Chapter 3</span>
+        <h1 class="page-title">Research Design and Methodology</h1>
+        <p class="body-text">
+          This chapter outlines the structural design of our study, the environment in which the research was conducted, our sampling method, survey instrumentation, and statistical calculations.
+        </p>
+      </section>
+
+      <!-- Sub-Navigation Tabs -->
+      <nav class="chapter-subnav reveal">
+        <a href="#design">Research Design</a>
+        <a href="#environment">Research Environment</a>
+        <a href="#sample">Sample & Population</a>
+        <a href="#instrument">Research Instrument</a>
+        <a href="#collection">Data Collection</a>
+        <a href="#treatment">Statistical Treatment</a>
+      </nav>
+
+      <!-- Methodology Content -->
+      <div class="methodology-content">
+        
+        <!-- Research Design -->
+        <section id="design" class="reading-section glass-card reveal">
+          <h2 class="section-title">Research Design</h2>
+          <p class="body-text">
+            The study employed a <strong>correlational research design</strong> to evaluate and compare two primary variables: smartphone addiction levels (independent variable) and academic performance (dependent variable) of the respondents. By using a correlational model, the study seeks to determine whether a statistical relationship exists between student screen habits and quarterly GPA, and to understand the strength of that connection without direct experimental manipulation.
+          </p>
+        </section>
+
+        <!-- Research Environment -->
+        <section id="environment" class="reading-section glass-card reveal">
+          <h2 class="section-title">Research Environment</h2>
+          <p class="body-text">
+            The study was conducted at <strong>Dumanjug National High School</strong>, one of the primary public educational institutions in Dumanjug, Cebu. The campus is located in close proximity to Cebu Technological University (CTU) Dumanjug Extension in Barangay Li-ong, Dumanjug, Cebu. The institution comprises approximately 62 faculty members, administrative staff, and the principal, catering to a student body of roughly 2,000 learners. The school's mission is to facilitate quality instruction and promote academic and vocational improvements.
+          </p>
+        </section>
+
+        <!-- Sample and Population -->
+        <section id="sample" class="reading-section glass-card reveal">
+          <h2 class="section-title">Sample and Population</h2>
+          <p class="body-text">
+            The total population of Grade 11 and Grade 12 Senior High School students at Dumanjug National High School is 615 students (340 Grade 11 students and 275 Grade 12 students). To determine the ideal sample size, the researchers utilized <strong>Slovin's Formula</strong> with a 5% margin of error:
+          </p>
+
+          <div class="math-formula-card">
+            <div class="math-formula">
+              \[n = \frac{N}{1 + N \cdot e^2}\]
+            </div>
+            <ul class="math-explanation">
+              <li><strong>n</strong> = Sample size to be determined</li>
+              <li><strong>N</strong> = Total population size (615)</li>
+              <li><strong>e</strong> = Margin of error (0.05)</li>
+            </ul>
+          </div>
+
+          <h3 class="subsection-title">Calculation Walkthrough</h3>
+          <p class="body-text">
+            Following Slovin's equation, the calculation is structured as follows:
+          </p>
+          <ol class="body-text" style="padding-left: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-xs);">
+            <li>Calculate error margin squared: \(e^2 = 0.05^2 = 0.0025\)</li>
+            <li>Multiply population by error squared: \(615 \cdot 0.0025 = 1.5375\)</li>
+            <li>Add constant value: \(1 + 1.5375 = 2.5375\)</li>
+            <li>Divide total population by result: \(n = \frac{615}{2.5375} \approx 242.36\)</li>
+          </ol>
+          <p class="body-text" style="margin-top: var(--space-md);">
+            Thus, a random sample of <strong>242 Senior High School students</strong> was established as the survey group.
+          </p>
+        </section>
+
+        <!-- Research Instrument -->
+        <section id="instrument" class="reading-section glass-card reveal">
+          <h2 class="section-title">Research Instrument</h2>
+          <p class="body-text">
+            The primary instrument used was a structured Likert-scale questionnaire. It contains statements designed to evaluate various dimensions of smartphone habits, scored across 5 levels of agreement:
+          </p>
+
+          <div class="likert-visual">
+            <div class="likert-bubble">
+              <div class="likert-value">5</div>
+              <div class="likert-label">Strongly Agree</div>
+            </div>
+            <div class="likert-bubble">
+              <div class="likert-value">4</div>
+              <div class="likert-label">Agree</div>
+            </div>
+            <div class="likert-bubble">
+              <div class="likert-value">3</div>
+              <div class="likert-label">Neutral</div>
+            </div>
+            <div class="likert-bubble">
+              <div class="likert-value">2</div>
+              <div class="likert-label">Disagree</div>
+            </div>
+            <div class="likert-bubble">
+              <div class="likert-value">1</div>
+              <div class="likert-label">Strongly Disagree</div>
+            </div>
+          </div>
+
+          <p class="body-text">
+            The questions are divided into specific categories of addiction determinants:
+          </p>
+          <ul class="body-text" style="padding-left: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-xs);">
+            <li><strong>Craving (4 items):</strong> Gauging anxiety and restlessness when the phone is unavailable.</li>
+            <li><strong>Social Relationship Dependency (4 items):</strong> Evaluating preference for online vs. face-to-face communications.</li>
+            <li><strong>Physical Discomfort (4 items):</strong> Identifying physical consequences (e.g., wrist and neck pain).</li>
+            <li><strong>Study Habit Distractions (5 items):</strong> Investigating device triggers and study interruptions.</li>
+          </ul>
+        </section>
+
+        <!-- Data Collection -->
+        <section id="collection" class="reading-section glass-card reveal">
+          <h2 class="section-title">Data Collection</h2>
+          <p class="body-text">
+            Surveys were administered face-to-face to Senior High School students on campus. This approach ensured direct engagement, allowing researchers to clarify terms, maintain control over survey distribution, and ensure a high completion rate.
+          </p>
+          <p class="body-text">
+            Questionnaires recorded daily usage patterns, preferred applications, and demographic metrics. Crucially, the survey recorded the respondents' first-quarter Grade Point Average (GPA) to serve as the core metric for academic performance. All data collected was treated with absolute confidentiality.
+          </p>
+        </section>
+
+        <!-- Statistical Treatment -->
+        <section id="treatment" class="reading-section glass-card reveal">
+          <h2 class="section-title">Statistical Treatment of the Data</h2>
+          <p class="body-text">
+            To determine if a relationship exists between smartphone addiction and academic performance, the researchers calculated <strong>Pearson's r correlation coefficient</strong> and the corresponding <strong>p-value</strong>.
+          </p>
+
+          <h3 class="subsection-title">Smartphone Addiction Scale Range</h3>
+          <p class="body-text">
+            Mean scores from the survey are interpreted as follows:
+          </p>
+          <table class="research-table">
+            <thead>
+              <tr>
+                <th>Range</th>
+                <th>Description</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>4.2 &ndash; 5.0</td>
+                <td>Strongly Agree</td>
+                <td>Strongly Addicted</td>
+              </tr>
+              <tr>
+                <td>3.4 &ndash; 4.1</td>
+                <td>Agree</td>
+                <td>Moderately Addicted</td>
+              </tr>
+              <tr>
+                <td>2.6 &ndash; 3.3</td>
+                <td>Neutral</td>
+                <td>Neutral</td>
+              </tr>
+              <tr>
+                <td>1.8 &ndash; 2.5</td>
+                <td>Disagree</td>
+                <td>Slightly Addicted</td>
+              </tr>
+              <tr>
+                <td>1.0 &ndash; 1.7</td>
+                <td>Strongly Disagree</td>
+                <td>Not Addicted</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="subsection-title">Academic Performance Scale Range</h3>
+          <p class="body-text">
+            Students' academic GPAs are categorized based on standard grading equivalents:
+          </p>
+          <table class="research-table">
+            <thead>
+              <tr>
+                <th>GPA Range</th>
+                <th>Qualitative Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>90 &ndash; 100</td>
+                <td>Outstanding</td>
+              </tr>
+              <tr>
+                <td>85 &ndash; 89</td>
+                <td>Very Satisfactory</td>
+              </tr>
+              <tr>
+                <td>80 &ndash; 84</td>
+                <td>Satisfactory</td>
+              </tr>
+              <tr>
+                <td>75 &ndash; 79</td>
+                <td>Fairly Satisfactory</td>
+              </tr>
+              <tr>
+                <td>Below 75</td>
+                <td>Did Not Meet Expectation</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2024-2025 G12 CSS Student Researchers. All rights reserved.</p>
+      <p style="margin-top: var(--space-xs);">Developed by <strong>Jhon Paul Baonil</strong> under Practical Research 2 in Dumanjug National High School.</p>
+    </footer>
+  </div>
+
+  <!-- Global JavaScript -->
+  <script src="global.js"></script>
+  <!-- MathJax for rendering LaTeX formulas -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* ================================================
+   CHAPTER 3 CUSTOM STYLES — G12 Research Website
+   ================================================ */
+
+.methodology-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.math-formula-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  margin: var(--space-lg) 0;
+}
+
+.math-formula {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin: var(--space-md) 0;
+  letter-spacing: 0.05em;
+}
+
+.math-explanation {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.math-explanation li {
+  list-style-type: none;
+  padding-left: 14px;
+  position: relative;
+}
+
+.math-explanation li::before {
+  content: '▪';
+  color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+/* Likert scale representation */
+.likert-visual {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  margin: var(--space-lg) 0;
+  flex-wrap: wrap;
+}
+
+.likert-bubble {
+  flex: 1;
+  min-width: 90px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.likert-bubble:hover {
+  border-color: var(--color-primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.likert-value {
+  font-family: var(--font-label);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.likert-label {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}

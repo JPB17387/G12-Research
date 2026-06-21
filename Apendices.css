@@ -1,0 +1,172 @@
+/* ================================================
+   APPENDICES CUSTOM STYLES — G12 Research Website
+   ================================================ */
+
+.appendices-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+.appendix-section {
+  scroll-margin-top: calc(var(--navbar-h) + 20px);
+}
+
+/* Formal Academic Letter Styling */
+.letter-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-body);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.letter-date {
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.letter-recipient {
+  margin-bottom: var(--space-lg);
+  line-height: 1.5;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.letter-salutation {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.letter-body {
+  margin-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.letter-signatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--border-glass);
+  padding-top: var(--space-md);
+}
+
+.sig-block {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.sig-name {
+  font-family: var(--font-label);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 10px;
+}
+
+/* Questionnaire Visual Styling */
+.questionnaire-paper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-card);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.survey-info-fields {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border-bottom: 2px dashed var(--border-glass);
+  padding-bottom: var(--space-md);
+}
+
+.field-line {
+  font-family: var(--font-label);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.field-line span {
+  color: var(--text-primary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--text-muted);
+  padding: 0 10px;
+}
+
+.q-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+}
+
+.q-table th {
+  background: rgba(108, 99, 255, 0.08);
+  color: var(--color-primary);
+  font-family: var(--font-label);
+  font-weight: 700;
+  padding: 10px 6px;
+  border: 1px solid var(--border-glass);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.q-table td {
+  padding: 10px 8px;
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+}
+
+.q-table td.q-text {
+  text-align: left;
+  font-family: var(--font-body);
+}
+
+.q-table td.q-chk {
+  text-align: center;
+  width: 50px;
+}
+
+.q-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border-glass);
+  border-radius: 3px;
+  display: inline-block;
+  background: rgba(255,255,255,0.02);
+}
+
+.q-section-header {
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  background: rgba(0, 212, 170, 0.05);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .letter-box, .questionnaire-paper {
+    padding: var(--space-lg);
+  }
+  .survey-info-fields {
+    grid-template-columns: 1fr;
+  }
+}

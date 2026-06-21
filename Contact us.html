@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with the Grade 12 CSS student researchers or the Practical Research advisor at Dumanjug National High School.">
+  <title>Contact Us — Smartphone Addiction Study</title>
+  
+  <!-- Global and Page Stylesheets -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="Contact us.css">
+</head>
+<body>
+
+  <!-- Floating Particles Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- Navbar Header -->
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="homepage.html" class="navbar-brand">Smartphone Addiction Study</a>
+        <ul class="navbar-links">
+          <li><a href="homepage.html">Homepage</a></li>
+          <li><a href="About authors.html">About Authors</a></li>
+          <li><a href="Contact us.html" class="active">Contact Us</a></li>
+          <li><a href="Chapter 1.html">Chapter 1</a></li>
+          <li><a href="Chapter 2.html">Chapter 2</a></li>
+          <li><a href="Chapter 3.html">Chapter 3</a></li>
+          <li><a href="Chapter 4.html">Chapter 4</a></li>
+          <li><a href="Chapter 5.html">Chapter 5</a></li>
+          <li><a href="References.html">References</a></li>
+          <li><a href="Apendices.html">Appendices</a></li>
+          <li><a href="Curriculum Vitae.html">CV</a></li>
+        </ul>
+        <div class="navbar-controls">
+          <button id="theme-toggle" class="theme-toggle" title="Switch Theme">🌙</button>
+          <button id="hamburger" class="hamburger" aria-expanded="false" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="homepage.html">Homepage</a>
+      <a href="About authors.html">About Authors</a>
+      <a href="Contact us.html" class="active">Contact Us</a>
+      <a href="Chapter 1.html">Chapter 1</a>
+      <a href="Chapter 2.html">Chapter 2</a>
+      <a href="Chapter 3.html">Chapter 3</a>
+      <a href="Chapter 4.html">Chapter 4</a>
+      <a href="Chapter 5.html">Chapter 5</a>
+      <a href="References.html">References</a>
+      <a href="Apendices.html">Appendices</a>
+      <a href="Curriculum Vitae.html">CV</a>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="container">
+      
+      <!-- Page Header -->
+      <section class="text-center mb-xl reveal">
+        <span class="chapter-badge">Get in Touch</span>
+        <h1 class="page-title">Contact the Team</h1>
+        <p class="body-text" style="max-width: 600px; margin: 0 auto;">
+          Have questions about our data, findings, or methodology? Feel free to reach out to the student researchers or our advisor.
+        </p>
+      </section>
+
+      <!-- Contact Layout -->
+      <section class="contact-layout reveal">
+        
+        <!-- Info Panel -->
+        <div class="contact-info-panel">
+          
+          <div class="glass-card info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <h3>Institution</h3>
+              <p>Dumanjug National High School<br>Li-ong, Dumanjug, Cebu, Philippines</p>
+            </div>
+          </div>
+
+          <div class="glass-card info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-text">
+              <h3>Research Advisor</h3>
+              <a href="mailto:jeinmaligon7@gmail.com">Geraldine L. Porferio, Ma.Ed.</a>
+            </div>
+          </div>
+
+          <div class="glass-card info-item">
+            <div class="info-icon">📱</div>
+            <div class="info-text">
+              <h3>Primary Research Contact</h3>
+              <p>Jhon Paul A. Baonil<br>Mobile: +63 985 903 2274</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Form Panel -->
+        <div class="glass-card">
+          <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent (simulation).'); this.reset();">
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Your Name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="yourname@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="Inquiry Subject" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-control" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
+          </form>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2024-2025 G12 CSS Student Researchers. All rights reserved.</p>
+      <p style="margin-top: var(--space-xs);">Developed by <strong>Jhon Paul Baonil</strong> under Practical Research 2 in Dumanjug National High School.</p>
+    </footer>
+  </div>
+
+  <!-- Global JavaScript -->
+  <script src="global.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* ================================================
+   HOMEPAGE CUSTOM STYLES — G12 Research Website
+   ================================================ */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-3xl) 0 var(--space-xl);
+}
+
+.hero-meta {
+  font-family: var(--font-label);
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--text-primary);
+  max-width: 950px;
+  margin-bottom: var(--space-lg);
+  text-shadow: var(--shadow-text);
+  letter-spacing: -0.01em;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin-bottom: var(--space-xl);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-3xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.authors-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  width: 100%;
+  margin-top: var(--space-xl);
+}
+
+.meta-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.meta-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+}
+
+.meta-card h3 {
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-sm);
+}
+
+.meta-card p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Accordion modifications */
+.accordion-container {
+  margin-top: var(--space-2xl);
+}
+
+/* Visual Table of Contents */
+.toc-section {
+  margin-top: var(--space-3xl);
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.toc-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-normal);
+}
+
+.toc-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.toc-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.toc-card-number {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.toc-card-page {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.toc-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.toc-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.toc-card-arrow {
+  margin-top: var(--space-md);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toc-card-arrow span {
+  transition: transform var(--transition-fast);
+}
+
+.toc-card:hover .toc-card-arrow span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: var(--space-xl) 0;
+  }
+}

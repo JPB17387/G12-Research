@@ -1,0 +1,140 @@
+/* ================================================
+   CHAPTER 4 CUSTOM STYLES — G12 Research Website
+   ================================================ */
+
+.data-section {
+  scroll-margin-top: calc(var(--navbar-h) + 20px);
+  margin-bottom: var(--space-2xl);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: var(--space-lg) 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: var(--radius-full);
+}
+
+/* Custom Table Formatting */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.data-table th {
+  background: rgba(108, 99, 255, 0.12);
+  color: var(--color-primary);
+  font-family: var(--font-label);
+  font-weight: 700;
+  padding: 14px 12px;
+  border-bottom: 2px solid var(--border-glass);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+}
+
+.data-table tr:hover td {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table th.align-left,
+.data-table td.align-left {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Highlighted Column/Cell */
+.highlight-cell {
+  background: rgba(0, 212, 170, 0.05);
+  font-weight: 600;
+  color: var(--color-secondary) !important;
+}
+
+/* Stat Grid Cards for Summary Cards */
+.stat-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+}
+
+.stat-val {
+  font-family: var(--font-label);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.stat-lbl {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Correlation Box */
+.correlation-card {
+  background: rgba(108, 99, 255, 0.03);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin: var(--space-xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.correlation-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-btn);
+}
+
+.correlation-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.corr-val {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: var(--font-label);
+}

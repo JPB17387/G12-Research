@@ -1,0 +1,184 @@
+/* ================================================
+   CURRICULUM VITAE CUSTOM STYLES — G12 Research Website
+   ================================================ */
+
+.cv-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+}
+
+.cv-tabs a {
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.cv-tabs a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--nav-active-bg);
+}
+
+.cv-section {
+  scroll-margin-top: calc(var(--navbar-h) + 30px);
+  margin-bottom: var(--space-2xl);
+}
+
+.cv-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-glass);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.cv-name-title h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.cv-name-title p {
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.cv-meta-contact {
+  text-align: right;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cv-meta-contact a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.cv-meta-contact a:hover {
+  text-decoration: underline;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.cv-block h3 {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 10px;
+}
+
+.cv-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cv-detail-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding-bottom: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+
+.cv-detail-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cv-detail-val {
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: right;
+}
+
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.edu-item {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--border-glass);
+}
+
+.edu-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-secondary);
+  box-shadow: 0 0 8px var(--color-secondary);
+}
+
+.edu-year {
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.edu-school {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.edu-loc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  .cv-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cv-meta-contact {
+    text-align: left;
+  }
+}
