@@ -1,33 +1,9 @@
 /* ================================================
    CURRICULUM VITAE CUSTOM STYLES — G12 Research Website
+   Note: .cv-tabs styles are now in global.css
    ================================================ */
 
-.cv-tabs {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
-  margin-bottom: var(--space-xl);
-}
 
-.cv-tabs a {
-  font-family: var(--font-label);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
-}
-
-.cv-tabs a:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background: var(--nav-active-bg);
-}
 
 .cv-section {
   scroll-margin-top: calc(var(--navbar-h) + 30px);

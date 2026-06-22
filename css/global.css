@@ -721,3 +721,103 @@ body.light-theme #particles-canvas {
 .flex-center { display: flex; align-items: center; justify-content: center; }
 .gap-sm { gap: var(--space-sm); }
 .gap-md { gap: var(--space-md); }
+
+/* ================================================
+   SHARED CHAPTER SUB-NAVIGATION (Horizontal Anchor Tabs)
+   Used by Chapter 1–5, Appendices, and CV pages
+   ================================================ */
+.chapter-subnav,
+.cv-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  padding: var(--space-sm) 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  border-bottom: 1px solid var(--border-glass);
+  position: sticky;
+  top: var(--navbar-h);
+  background: var(--bg-primary);
+  z-index: 100;
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.chapter-subnav::-webkit-scrollbar,
+.cv-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.chapter-subnav a,
+.cv-tabs a {
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.chapter-subnav a:hover,
+.cv-tabs a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--nav-active-bg);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.15);
+}
+
+/* Shared Chapter Content Container */
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+/* Document Reading Section */
+.reading-section {
+  scroll-margin-top: calc(var(--navbar-h) + 60px);
+  margin-bottom: var(--space-2xl);
+}
+
+.reading-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Small badge label above section titles */
+.label-badge {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  background: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.25);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .chapter-subnav,
+  .cv-tabs {
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .chapter-subnav a,
+  .cv-tabs a {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
