@@ -2,7 +2,7 @@
 
 A comprehensive research study investigating the impact of smartphone addiction on the academic performance of Senior High School students at Dumanjug National High School.
 
-## 📚 Project Overview
+## Project Overview
 
 This is a G12 Practical Research 2 capstone project presented as an interactive, modern web-based research paper. The study explores the relationship between smartphone addiction and academic performance among senior high school students, providing insights, data analysis, and recommendations.
 
@@ -12,14 +12,14 @@ This is a G12 Practical Research 2 capstone project presented as an interactive,
 
 **Institution:** Dumanjug National High School
 
-## 🎯 Research Focus
+## Research Focus
 
 - **Main Question:** How does smartphone addiction affect the academic performance of senior high school students?
 - **Scope:** Senior high school students at Dumanjug National High School
 - **Methodology:** Practical Research 2 study
 - **Deliverables:** 5 chapters, references, appendices, and author biographies
 
-## 🚀 Features
+## Features
 
 ### Interactive Web Experience
 - **Dark & Light Theme Toggle:** Switch between professional dark and light modes
@@ -37,7 +37,7 @@ This is a G12 Practical Research 2 capstone project presented as an interactive,
 - **Curriculum Vitae:** Author academic and professional information
 - **Contact Us:** Contact information for inquiries
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 - **Styling:**
@@ -51,7 +51,7 @@ This is a G12 Practical Research 2 capstone project presented as an interactive,
 - **Animations:** Canvas-based particle system, CSS transitions
 - **Design:** Mobile-first responsive design
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 G12 Research/
@@ -99,7 +99,7 @@ G12 Research/
     └── extracted_text.txt
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 - **Primary:** `#6C63FF` (Purple)
@@ -120,7 +120,7 @@ G12 Research/
 - Responsive spacing system
 - Professional shadow system for depth
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Web browser (Chrome, Firefox, Safari, Edge recommended)
@@ -153,7 +153,7 @@ G12 Research/
 - Click the moon/sun icon (🌙) in the top-right corner to toggle between dark and light themes
 - Theme preference is persisted in browser storage
 
-## 📖 Navigation Guide
+## Navigation Guide
 
 - **Homepage:** Overview and quick links to all sections
 - **Chapters:** Read through 5 research chapters in sequence
@@ -163,7 +163,7 @@ G12 Research/
 - **CV:** View academic and professional information
 - **Contact:** Get in touch with the authors
 
-## 🔧 Customization
+## Customization
 
 ### Modifying Colors & Theme
 Edit the CSS custom properties in [css/global.css](css/global.css):
@@ -186,7 +186,7 @@ Edit the CSS custom properties in [css/global.css](css/global.css):
 - Update styles in corresponding CSS files
 - Content is separated from styling for easy maintenance
 
-## 📝 JavaScript Features
+## JavaScript Features
 
 ### global.js Functions
 - **Particles Animation:** Animated floating particles with interactive connections
@@ -195,7 +195,7 @@ Edit the CSS custom properties in [css/global.css](css/global.css):
 - **Scroll Effects:** Smooth reveal animations on page scroll
 - **Active Link Detection:** Automatic highlighting of current page in navigation
 
-## 🖼️ Assets
+## Assets
 
 ### Images
 - Author profiles in `Images/authors/`
@@ -205,7 +205,7 @@ Edit the CSS custom properties in [css/global.css](css/global.css):
 - Extracted cover page: `Research reference/extracted_cover.txt`
 - Extracted text: `Research reference/extracted_text.txt`
 
-## 💡 Future Enhancements
+##  Future Enhancements
 
 - [ ] Search functionality across chapters
 - [ ] PDF export of full research paper
@@ -215,22 +215,22 @@ Edit the CSS custom properties in [css/global.css](css/global.css):
 - [ ] Print-optimized layouts
 - [ ] Multi-language support
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ✉️ Contact
+## Contact
 
 For inquiries about this research study:
 - Visit the Contact Us page in the website
 - Refer to the Curriculum Vitae and About Authors pages for more information
 
-## 📚 Academic Citation
+## Academic Citation
 
 When citing this research, use the format specified in the References section of the study.
 
 ---
 
-**Last Updated:** June 2026  
-**Version:** 1.0  
+**Last Updated:** July 2026  
+**Version:** 1.1  
 **Status:** Completed Research Study
