@@ -238,7 +238,7 @@ When citing this research, use the format specified in the References section of
 <br>
 
 ## Buy me a coffee
-Donate some money to support my work.  <br>Thank you! :)
+You can donate me to support my work.  <br>Thank you! :)
 <br>
 <br>
 
