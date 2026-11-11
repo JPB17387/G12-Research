@@ -1,258 +1,120 @@
 # Determinants of Smartphone Addiction on Academic Performance
 
-A comprehensive research study investigating the impact of smartphone addiction on the academic performance of Senior High School students at Dumanjug National High School.
+An interactive, multi-page web presentation of a Grade 12 Practical Research 2 study conducted at Dumanjug National High School. The study examines smartphone addiction and academic performance among senior high school students. The site publishes the study's abstract, five research chapters, references, appendices, researcher profiles, curriculum vitae, and contact information.
 
-## Project Overview
+## Core Features
 
-This is a G12 Practical Research 2 capstone project presented as an interactive, modern web-based research paper. The study explores the relationship between smartphone addiction and academic performance among senior high school students, providing insights, data analysis, and recommendations.
+- A landing page that redirects to the research homepage.
+- Five chapters covering scope, related literature, methodology, data analysis, and findings.
+- Responsive desktop and mobile navigation.
+- Light/dark theme toggle, persisted in the browser under the `g12-theme` local-storage key.
+- Canvas-based particle background, scroll-reveal effects, and accordion content.
+- Locally stored author and donation-QR image assets.
 
-**Authors:**
-- Je-in M. Malig-on
-- Jhon Paul A. Baonil
+## Tech Stack & Architecture
 
-**Institution:** Dumanjug National High School
+- **Languages:** HTML5, CSS3, and browser-native JavaScript.
+- **Architecture:** Dependency-free, static multi-page website. There is no server-side application, API, build pipeline, package manager, or bundler in this repository.
+- **Entry point:** `index.html` redirects to `html/homepage.html` using both a meta refresh and a JavaScript fallback.
+- **Shared presentation layer:** Every content page loads `css/global.css`; each page then loads its own stylesheet from `css/`.
+- **Shared behavior:** Every content page loads `js/global.js`, which implements particles, theme persistence, responsive navigation, active-link highlighting, scroll reveals, and accordions.
+- **Data and persistence:** Research data is rendered directly in the HTML. The only browser persistence is the selected theme in `localStorage`; no database, migration, seed process, or external API is used.
+- **Assets:** Author portraits and the donation QR code are committed under `Images/`. Source research artifacts (PDF, DOCX, PPTX, and extracted text) are retained under `Research reference/` and are not runtime dependencies of the website.
+- **Third-party browser resources:** `css/global.css` imports Google Fonts; all pages load the Buy Me a Coffee widget from `cdnjs.buymeacoffee.com`; `html/Chapter 3.html` loads MathJax 3 from `cdn.jsdelivr.net` to render formulas. These are network-dependent enhancements.
 
-## Research Focus
+## Prerequisites & System Requirements
 
-- **Main Question:** How does smartphone addiction affect the academic performance of senior high school students?
-- **Scope:** Senior high school students at Dumanjug National High School
-- **Methodology:** Practical Research 2 study
-- **Deliverables:** 5 chapters, references, appendices, and author biographies
+No language runtime, package manager, database, or dependency installation is required by this repository. It contains no `package.json`, lockfile, `requirements.txt`, `docker-compose` file, or equivalent build/runtime manifest.
 
-## Features
+To view the site, use a current graphical browser with JavaScript enabled. A local HTTP server is optional; direct opening of `index.html` is supported by the repository's relative paths and redirect.
 
-### Interactive Web Experience
-- **Dark & Light Theme Toggle:** Switch between professional dark and light modes
-- **Animated Particle Background:** Animated particles with connection lines for visual appeal
-- **Responsive Navigation:** Desktop and mobile-friendly navigation with hamburger menu
-- **Smooth Scrolling:** Scroll animations and smooth page transitions
-- **Modern UI Design:** Glassmorphism effects, gradients, and professional typography
+An internet connection is needed only for the remote fonts, donation widget, and Chapter 3 MathJax rendering. The core HTML, CSS, JavaScript, and locally referenced images remain in the repository.
 
-### Content Sections
-- **Homepage:** Hero section with study overview and quick navigation
-- **5 Research Chapters:** Detailed chapters covering research methodology, findings, and analysis
-- **About Authors:** Author biographies and credentials
-- **References:** Complete bibliography and citations
-- **Appendices:** Supporting data and supplementary materials
-- **Curriculum Vitae:** Author academic and professional information
-- **Contact Us:** Contact information for inquiries
+## Step-by-Step Local Setup & Installation Guide
 
-## Technology Stack
+### 1. Clone and enter the repository
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Styling:**
-  - CSS custom properties (variables) for theme management
-  - Glassmorphism and modern UI patterns
-  - Responsive grid and flexbox layouts
-- **Fonts:** 
-  - Playfair Display (headings)
-  - Inter (body text)
-  - Space Grotesk (labels)
-- **Animations:** Canvas-based particle system, CSS transitions
-- **Design:** Mobile-first responsive design
+```powershell
+git clone https://github.com/JPB17387/G12-Research.git
+Set-Location 'G12-Research'
+```
+
+If you already have a checkout, enter its root directory instead:
+
+```powershell
+Set-Location 'C:\path\to\G12-Research'
+```
+
+### 2. Install dependencies
+
+There are no dependencies to install. Do not run `npm install`, `pip install`, or database initialization commands: none are defined by this repository.
+
+### 3. Environment configuration
+
+No `.env` or `.env.example` file exists, and the site does not read environment variables. No environment configuration or secrets are required.
+
+### 4. Database setup / initialization
+
+Not applicable. The project has no database, ORM, migration files, seed scripts, or local data store beyond the browser's `localStorage` theme preference.
+
+## Running the Project Locally
+
+### Directly in a browser
+
+Open [`index.html`](index.html). It redirects to [`html/homepage.html`](html/homepage.html), which is the application homepage.
+
+### With a local HTTP server
+
+The repository does not prescribe a server command. If your machine already has Python 3 available, its standard-library server can optionally be started from the repository root:
+
+```powershell
+python -m http.server 8000
+```
+
+Then browse to `http://localhost:8000/`. Stop the optional server with `Ctrl+C`.
+
+There is no development build, production build, background worker, client/server concurrency command, or deployment command defined in this checkout.
 
 ## Project Structure
 
-```
-G12 Research/
-├── index.html              # Entry point with redirect
-├── update-paths.ps1        # PowerShell script for path updates
-├── README.md              # Project documentation (this file)
-├── LICENSE                # MIT License
-│
-├── html/                  # Page content
-│   ├── homepage.html
-│   ├── Chapter 1.html
-│   ├── Chapter 2.html
-│   ├── Chapter 3.html
-│   ├── Chapter 4.html
-│   ├── Chapter 5.html
-│   ├── About authors.html
-│   ├── References.html
-│   ├── Apendices.html
-│   ├── Contact us.html
-│   └── Curriculum Vitae.html
-│
-├── css/                   # Styling
-│   ├── global.css         # Global design system and themes
-│   ├── homepage.css
-│   ├── Chapter 1.css
-│   ├── Chapter 2.css
-│   ├── Chapter 3.css
-│   ├── Chapter 4.css
-│   ├── Chapter 5.css
-│   ├── About authors.css
-│   ├── References.css
-│   ├── Apendices.css
-│   ├── Contact us.css
-│   └── Curriculum Vitae.css
-│
-├── js/                    # JavaScript functionality
-│   └── global.js          # Particles, theme toggle, navbar, scroll effects
-│
-├── Images/                # Project assets
-│   ├── authors/
-│   └── backgrounds/
-│
-└── Research reference/    # Source materials
-    ├── extracted_cover.txt
-    └── extracted_text.txt
+```text
+G12-Research/
+|-- index.html                         # Redirecting entry page
+|-- README.md                          # Project recovery and setup documentation
+|-- LICENSE                            # MIT License
+|-- update-paths.ps1                   # One-off path-rewrite utility (modifies HTML)
+|-- html/                              # Research pages and navigation targets
+|   |-- homepage.html                  # Main research landing page
+|   |-- Chapter 1.html ... Chapter 5.html
+|   |-- About authors.html
+|   |-- Contact us.html
+|   |-- References.html
+|   |-- Apendices.html                 # Filename intentionally uses this spelling
+|   `-- Curriculum Vitae.html
+|-- css/                               # Shared and page-specific stylesheets
+|   |-- global.css
+|   |-- homepage.css
+|   |-- chapter 1.css                  # Filename uses lowercase "chapter"
+|   `-- [page-specific CSS files]
+|-- js/
+|   `-- global.js                      # Shared browser interactions
+|-- Images/
+|   |-- authors/                       # Researcher portrait images
+|   `-- public/                        # Donation QR code
+`-- Research reference/                # Original/source research materials
+    |-- *.docx
+    |-- *.pdf
+    |-- *.pptx
+    `-- extracted_*.txt
 ```
 
-## Design System
+## Operational Notes
 
-### Color Palette
-- **Primary:** `#6C63FF` (Purple)
-- **Secondary:** `#00D4AA` (Cyan/Teal)
-- **Accent:** `#FF6B9D` (Pink)
-- **Background (Dark):** `#0a0e1a`
-- **Background (Light):** `#f0f2ff`
-
-### Typography
-- **Headings:** Playfair Display (serif) - elegant and academic
-- **Body:** Inter - clean and readable
-- **Labels:** Space Grotesk - modern and geometric
-
-### Features
-- Dark & Light theme support with CSS custom properties
-- Smooth transitions and animations
-- Glassmorphism effects on cards and modals
-- Responsive spacing system
-- Professional shadow system for depth
-
-## Getting Started
-
-### Prerequisites
-- Web browser (Chrome, Firefox, Safari, Edge recommended)
-- No build tools or dependencies required
-
-### Installation & Running
-
-1. **Clone or Download:**
-   ```bash
-   git clone <repository-url>
-   cd "G12 Research"
-   ```
-
-2. **Open in Browser:**
-   - Direct: Open `index.html` in your web browser
-   - Or serve locally using a simple HTTP server:
-     ```bash
-     # Python 3
-     python -m http.server 8000
-     
-     # Node.js (with http-server installed)
-     http-server
-     ```
-
-3. **Access the Site:**
-   - Local: `http://localhost:8000`
-   - Or open `index.html` directly in your browser
-
-### Using the Theme Toggle
-- Click the moon/sun icon (🌙) in the top-right corner to toggle between dark and light themes
-- Theme preference is persisted in browser storage
-
-## Navigation Guide
-
-- **Homepage:** Overview and quick links to all sections
-- **Chapters:** Read through 5 research chapters in sequence
-- **References:** View all sources and citations
-- **Appendices:** Access supplementary data and materials
-- **About Authors:** Learn about the researchers
-- **CV:** View academic and professional information
-- **Contact:** Get in touch with the authors
-
-## Customization
-
-### Modifying Colors & Theme
-Edit the CSS custom properties in [css/global.css](css/global.css):
-```css
-:root {
-  --color-primary: #6C63FF;
-  --color-secondary: #00D4AA;
-  /* ... other variables */
-}
-```
-
-### Adding New Pages
-1. Create new HTML file in `html/` folder
-2. Create corresponding CSS file in `css/` folder
-3. Add navigation link in navbar and mobile menu
-4. Include `global.css` and `global.js` for consistency
-
-### Modifying Content
-- Edit HTML files in the `html/` folder
-- Update styles in corresponding CSS files
-- Content is separated from styling for easy maintenance
-
-## JavaScript Features
-
-### global.js Functions
-- **Particles Animation:** Animated floating particles with interactive connections
-- **Theme Toggle:** Seamless switching between dark and light themes
-- **Responsive Navigation:** Mobile hamburger menu with smooth transitions
-- **Scroll Effects:** Smooth reveal animations on page scroll
-- **Active Link Detection:** Automatic highlighting of current page in navigation
-
-## Assets
-
-### Images
-- Author profiles in `Images/authors/`
-- Background images in `Images/backgrounds/`
-
-### Research Materials
-- Extracted cover page: `Research reference/extracted_cover.txt`
-- Extracted text: `Research reference/extracted_text.txt`
-
-##  Future Enhancements
-
-- [ ] Search functionality across chapters
-- [ ] PDF export of full research paper
-- [ ] Citation tools (BibTeX, APA, etc.)
-- [ ] Interactive data visualizations
-- [ ] Discussion/comments section
-- [ ] Print-optimized layouts
-- [ ] Multi-language support
+- Keep the directory structure intact. HTML pages reference shared resources with relative paths such as `../css/global.css`, `../js/global.js`, and `../Images/...`.
+- Preserve the exact filename casing and spaces shown above. In particular, links target `Apendices.html` and Chapter 1 references `css/chapter 1.css`.
+- `update-paths.ps1` contains hard-coded paths and writes changes into every file in `html/`. It is not part of normal setup or runtime; use it only when intentionally reorganizing paths and after reviewing its effects.
+- The theme default is dark. Clearing browser site data removes the saved theme selection.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For inquiries about this research study:
-- Visit the Contact Us page in the website
-- Refer to the Curriculum Vitae and About Authors pages for more information
-
-## Academic Citation
-
-When citing this research, use the format specified in the References section of the study.
-
----
-
-**Last Updated:** July 2026  
-**Version:** 1.1  
-**Status:** Completed Research Study
-
-<br>
-
-## Buy me a coffee
-You can donate me to support my work.  <br>Thank you! :)
-<br>
-<br>
-
->Click the button below to donate:
-
-<a href="https://buymeacoffee.com/paulb_codebreaker" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174">
-</a>
-<br>
-<br>
-<br>
-
->Or scan this QR Code to donate:
-
-<p align="center" >
-  <img src="./Images/public/buy-me-a-coffe-qr-code.png" alt="Centered Logo" width="400" height="400">
-</p>
+This project is licensed under the [MIT License](LICENSE).
